@@ -18,27 +18,27 @@ export default function FAQSection() {
     {
       question: "How do we get started?",
       answer:
-        "We begin with a discovery call to understand your business, goals, target audience, and vision. From there, we create a tailored strategy and project roadmap.",
+        "We begin with a discovery call to understand your brand, goals, target audience, and vision. From there, we recommend the right package and put together a tailored design roadmap.",
     },
     {
-      question: "What services do you offer?",
+      question: "What packages do you offer?",
       answer:
-        "We offer full-stack web development, custom UI/UX design, modern branding, and performance optimization tailored to your business needs.",
+        "We offer Brand Identity, UI/UX Design, Design Strategy, and Web Development packages — from a standalone logo and visual identity system to a full brand-to-website build. Packages can also be combined based on what your business needs.",
     },
     {
       question: "How long does a project take?",
       answer:
-        "Project timelines depend on complexity. Typically, standard landing pages take 1-2 weeks, while full web platforms require 4-6 weeks.",
+        "Timelines depend on the package and scope. A brand identity package typically takes 2-3 weeks, while a full brand + website build usually takes 4-8 weeks from kickoff to launch.",
     },
     {
       question: "Will I be involved during the design process?",
       answer:
-        "Absolutely! We maintain full transparency through regular updates, design previews, and feedback loops throughout the project lifecycle.",
+        "Absolutely! Every package includes scheduled check-ins, design previews, and feedback rounds, so you're part of every key decision from concept to final delivery.",
     },
     {
-      question: "How many revisions are included?",
+      question: "Do I own the final files and designs?",
       answer:
-        "We offer up to 3 rounds of revisions during the design phase to ensure everything aligns perfectly with your expectations.",
+        "Yes. Once the project is complete and final payment is made, you receive full ownership of all source files, logos, and brand assets — ready to use however you need.",
     },
   ];
 
@@ -99,7 +99,7 @@ export default function FAQSection() {
               FAQ
             </h2>
             <p className="text-zinc-300 text-base sm:text-lg mb-8 font-normal">
-              Everything you need to know before starting your branding journey.
+              Everything you need to know about our design packages before we get started.
             </p>
           </div>
 
@@ -157,11 +157,11 @@ export default function FAQSection() {
             </h3>
 
             <h4 className="text-xl sm:text-2xl font-bold leading-snug mb-3">
-              Let&apos;s build something <br /> remarkable together.
+              Let&apos;s design a package <br /> that stands out.
             </h4>
 
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-8">
-              Whether you&apos;re starting from scratch or ready to elevate your brand, we&apos;re here to guide you every step of the way.
+              Whether you&apos;re launching a new product or refreshing your packaging design, we&apos;re here to help you pick the right package and bring it to shelf.
             </p>
 
             {/* Feature List */}
@@ -171,7 +171,7 @@ export default function FAQSection() {
                   <Calendar className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-bold text-base sm:text-lg leading-snug">
-                  Free 30-minute <br className="hidden sm:block" /> strategy call
+                  Free 30-minute <br className="hidden sm:block" /> design consultation
                 </span>
               </div>
 
@@ -180,7 +180,7 @@ export default function FAQSection() {
                   <User className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-bold text-base sm:text-lg leading-snug">
-                  Personalized project <br className="hidden sm:block" /> consultation
+                  Package recommendation <br className="hidden sm:block" /> based on your budget
                 </span>
               </div>
 

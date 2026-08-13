@@ -24,30 +24,30 @@ export default function Testimonials() {
     {
       id: 1,
       quote:
-        "The team understood our vision from day one and delivered a brand identity that truly stands out. Every detail was thoughtfully crafted.",
+        "The team understood our product from day one and designed packaging that truly stands out on the shelf. Every detail, from the die-line to the finish, was thoughtfully crafted.",
       author: "Arjun Mehta",
-      role: "Founder, Pixel Studio",
+      role: "Founder, Pixel Foods",
     },
     {
       id: 2,
       quote:
-        "Working with this design team transformed our web app. The attention to detail and user experience strategy exceeded our expectations.",
+        "Working with this design team transformed our packaging line. Their structural design and print-ready files exceeded our expectations and saved us weeks in production.",
       author: "Rohan Sharma",
-      role: "Co-Founder, TechFlow",
+      role: "Co-Founder, TechFlow Snacks",
     },
     {
       id: 3,
       quote:
-        "Exceptional creativity and flawless execution! They delivered modern UI designs and GSAP animations ahead of schedule.",
+        "Exceptional creativity and flawless execution! They delivered a complete packaging design system across our entire product range, ahead of schedule.",
       author: "Priya Verma",
       role: "Product Lead, Innovate Labs",
     },
     {
       id: 4,
       quote:
-        "Highly professional service! The brand positioning and responsive web design completely refreshed our online presence.",
+        "Highly professional service! The new packaging design and brand positioning completely refreshed how customers see us on the shelf.",
       author: "Karan Patel",
-      role: "CEO, Nexa Digital",
+      role: "CEO, Nexa Packaging",
     },
   ];
 

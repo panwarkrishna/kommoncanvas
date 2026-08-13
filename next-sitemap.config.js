@@ -1,22 +1,18 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://aditechinfo.com',
+  // NOTE: this project's actual sitemap.xml / robots.txt are generated
+  // natively by app/sitemap.ts and app/robots.ts (Next.js metadata routes).
+  // This next-sitemap config is kept in sync as a fallback only — it is
+  // not wired into the "build" script.
+  siteUrl: 'https://aditechinfo.com/kommoncanvas',
   generateRobotsTxt: true,
   trailingSlash: true,
-
-  /*
-    CANONICAL FIX:
-    exclude default auto-generated entries — additionalPaths mein
-    manually define kar rahe hain sab URLs with proper priority/freq.
-    Isse duplicate canonical issue nahi aayega.
-  */
   exclude: ['*'],
 
   changefreq: 'weekly',
   priority: 0.7,
 
-  additionalPaths: async (config) => [
-    /* ── Main Pages ─────────────────────────────────── */
+  additionalPaths: async () => [
     {
       loc: '/',
       changefreq: 'weekly',
@@ -30,33 +26,9 @@ module.exports = {
       lastmod: new Date().toISOString(),
     },
     {
-      loc: '/services/',
+      loc: '/service/',
       changefreq: 'monthly',
       priority: 0.9,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/services/branding/',
-      changefreq: 'monthly',
-      priority: 0.7,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/services/digital-marketing/',
-      changefreq: 'monthly',
-      priority: 0.7,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/services/experience-design/',
-      changefreq: 'monthly',
-      priority: 0.7,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/services/technology/',
-      changefreq: 'monthly',
-      priority: 0.7,
       lastmod: new Date().toISOString(),
     },
     {
@@ -71,62 +43,6 @@ module.exports = {
       priority: 0.7,
       lastmod: new Date().toISOString(),
     },
-
-    /* ── Case Studies ────────────────────────────────── */
-    {
-      loc: '/case-studies/carrotkart/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/mobileapp/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/adiskill/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/techfocal/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/durgaschoolofmotoring/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/adiskillbranding/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/adiskillbrochure/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/indusessentials/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: '/case-studies/vendingbrands/',
-      changefreq: 'monthly',
-      priority: 0.6,
-      lastmod: new Date().toISOString(),
-    },
   ],
 
   robotsTxtOptions: {
@@ -134,11 +50,5 @@ module.exports = {
       { userAgent: '*', allow: '/' },
       { userAgent: '*', disallow: '/api/' },
     ],
-    /*
-      404 FIX: additionalSitemaps se duplicate sitemap entry hata di.
-      next-sitemap khud /sitemap.xml generate karta hai — dobara
-      list karne se Google confuse hota tha aur 404 crawl hoti thi.
-    */
-    // additionalSitemaps: ['https://aditechinfo.com/sitemap.xml'], // REMOVED
   },
 }

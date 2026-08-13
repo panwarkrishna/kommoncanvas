@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 /**
@@ -37,6 +38,13 @@ const MOBILE_LINKS = [
   { label: "About Us", href: "/about" },
 ];
 
+// "/" only matches the homepage exactly; every other link matches its own
+// path and any nested route under it (e.g. "/work" also highlights "/work/123").
+function isActiveLink(href: string, pathname: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 function LogoMark() {
   return (
     <Link
@@ -45,7 +53,7 @@ function LogoMark() {
       data-cursor="hover"
     >
       <Image
-          src="./kommoncanvas-w-logo.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/kommoncanvas-w-logo.png`}
           alt="Kommon Canvas"
           width={160}
           height={44}
@@ -76,6 +84,8 @@ function MobileDrawer({
   open: boolean;
   onClose: () => void;
 }) {
+  const pathname = usePathname();
+
   // lock background scroll while drawer is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -131,16 +141,22 @@ function MobileDrawer({
           </div>
 
           <nav className="mt-8 flex flex-col">
-            {MOBILE_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={onClose}
-                className="border-b border-white/10 py-5 text-2xl font-semibold tracking-tight text-white transition-colors first:pt-0 hover:text-[#FF1E1E]"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {MOBILE_LINKS.map((link) => {
+              const active = isActiveLink(link.href, pathname);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={onClose}
+                  className={[
+                    "border-b border-white/10 py-5 text-2xl tracking-tight transition-colors first:pt-0 hover:text-[#FF1E1E]",
+                    active ? "font-bold text-[#FF1E1E]" : "font-semibold text-white",
+                  ].join(" ")}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 
@@ -159,6 +175,7 @@ function MobileDrawer({
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-30 w-full bg-black px-3 pt-4 pb-3 sm:px-6">
@@ -168,20 +185,23 @@ export default function Header() {
           <LogoMark />
 
           <nav className="hidden items-center gap-8 lg:flex">
-            {NAV_LINKS.map((link, i) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={[
-                  "whitespace-nowrap text-base transition-colors",
-                  i === 0
-                    ? "font-bold text-white"
-                    : "text-white/80 hover:text-white",
-                ].join(" ")}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const active = isActiveLink(link.href, pathname);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={[
+                    "whitespace-nowrap text-base transition-colors",
+                    active
+                      ? "font-bold text-white"
+                      : "text-white/80 hover:text-white",
+                  ].join(" ")}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <HamburgerButton onClick={() => setOpen(true)} />

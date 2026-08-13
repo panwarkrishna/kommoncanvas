@@ -94,10 +94,10 @@ export default function Footer() {
               Email
             </span>
             <a
-              href="mailto:hello@emergenxt.com"
+              href="mailto:hello@kommoncanvas.com"
               className="text-white text-xl sm:text-2xl font-bold hover:text-[#FF0000] transition-colors tracking-tight"
             >
-              hello@emergenxt.com
+              hello@kommoncanvas.com
             </a>
           </div>
 
@@ -107,10 +107,10 @@ export default function Footer() {
               Call
             </span>
             <a
-              href="tel:+919876543210"
+              href="tel:+919310217956"
               className="text-white text-xl sm:text-2xl font-bold hover:text-[#FF0000] transition-colors tracking-tight"
             >
-              +91 98765 43210
+              +91 9310217956
             </a>
           </div>
 
@@ -120,7 +120,7 @@ export default function Footer() {
               Location
             </span>
             <p className="text-white text-xl sm:text-2xl font-bold tracking-tight">
-              New Delhi, India
+             Noida, India
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function Footer() {
           {/* Public Folder Image Logo */}
           <div className="flex items-center justify-center my-6">
             <Image
-              src="./kommoncanvas-w-logo.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/kommoncanvas-w-logo.png`}
               alt="Kommon Canvas Logo"
               width={350}
               height={100}
@@ -155,6 +155,9 @@ export default function Footer() {
             </Link>
             <Link href="/about" className="hover:text-white transition-colors">
               About
+            </Link>
+              <Link href="/contact" className="hover:text-white transition-colors">
+              Contact 
             </Link>
           </nav>
         </div>

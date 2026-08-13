@@ -48,12 +48,20 @@ const PROCESS_STEPS: ProcessStep[] = [
   },
   {
     number: "03",
-    title: "Replace with title",
-    description: "Replace with description",
+    title: "Design & Prototyping",
+    description:
+      "This is where strategy becomes visual. We design brand identities, packaging concepts, dielines, and label systems — iterating through 3D mockups and physical prototypes until the design earns its place in-hand and on-shelf.\n\nEvery concept is tested against your brand strategy, production constraints, and target audience before it moves forward.",
     image: "../projects/pro-img03.png",
-    alt: "Replace with alt text",
+    alt: "Packaging design and 3D mockup prototypes",
   },
-  
+  {
+    number: "04",
+    title: "Refinement & Delivery",
+    description:
+      "We refine the chosen direction based on your feedback, finalize print-ready files, and prepare complete brand and packaging guidelines.\n\nYou walk away with production-ready assets, source files, and a system built to scale cleanly across your entire product range.",
+    image: "../projects/pro-img04.png",
+    alt: "Final packaging design files ready for production",
+  },
 ];
 
 export default function OurProcess() {
@@ -119,7 +127,14 @@ export default function OurProcess() {
       className="mx-auto w-full max-w-[1780px] border border-white/15 bg-black md:py-12"
     >
 
-      <SectionHeading redText="Our" whiteText="Process" />
+      <div className="px-6 pt-10 sm:px-8 md:px-12 md:pt-0">
+        <SectionHeading redText="Our Design" whiteText="Process" />
+        <p className="mx-auto mt-4 max-w-2xl text-center text-sm sm:text-base leading-relaxed text-white/70">
+          A structured, collaborative journey from first insight to shelf-ready
+          packaging — every step built to turn strategy into a brand people
+          notice.
+        </p>
+      </div>
       {PROCESS_STEPS.map((step, i) => (
         <div
           key={step.number}

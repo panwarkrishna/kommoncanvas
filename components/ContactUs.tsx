@@ -31,9 +31,9 @@ const SOCIAL_LINKS = [
 ];
 
 const CONTACT_DETAILS = [
-  { label: "Email", value: "hello@yourstudio.com", href: "mailto:hello@yourstudio.com" },
-  { label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
-  { label: "Location", value: "Delhi, India (Remote-first)", href: undefined },
+  { label: "Email", value: "hello@kommoncanvas.com", href: "mailto:hello@kommoncanvas.com" },
+  { label: "Phone", value: "+91 9310217956", href: "tel:+919310217956" },
+  { label: "Location", value: "Noida, India (Remote-first)", href: undefined },
 ];
 
 export default function ContactUs() {
