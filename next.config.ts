@@ -1,12 +1,17 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  images: {
-    formats: ["image/avif", "image/webp"],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath: '/kommoncanvas',
+  trailingSlash: true,
+  typescript: {
+    ignoreBuildErrors: true,
   },
-  compress: true,
+   env: {
+    NEXT_PUBLIC_BASE_PATH: '/kommoncanvas',
+  },
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
