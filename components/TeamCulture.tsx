@@ -36,15 +36,15 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: "member-1",
     image: "../projects/pro-img01.png",
     alt: "Team member sketching at desk",
-    name: "Replace Name",
-    designation: "Replace Designation",
+    name: "Khushi Tyagi",
+    designation: "Founder & Creative Director",
   },
   {
     id: "member-2",
     image: "../projects/pro-img02.png",
     alt: "Team member's desk setup with monitor",
-    name: "Replace Name",
-    designation: "Replace Designation",
+    name: "Rhea Kapoor",
+    designation: "Brand Strategist",
   },
   {
     id: "member-3",
@@ -57,22 +57,22 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: "member-4",
     image: "../projects/pro-img05.png",
     alt: "Two team members smiling together",
-    name: "Replace Name",
-    designation: "Replace Designation",
+    name: "Aarav Mehta",
+    designation: "Packaging Designer",
   },
   {
     id: "member-5",
     image: "../projects/pro-img06.png",
     alt: "Team member using stylus on tablet",
-    name: "Replace Name",
-    designation: "Replace Designation",
+    name: "Simran Chawla",
+    designation: "UI/UX Designer",
   },
   {
     id: "member-6",
     image: "../projects/pro-img07.png",
     alt: "Team member working, black and white photo",
-    name: "Replace Name",
-    designation: "Replace Designation",
+    name: "Devansh Rao",
+    designation: "Client Partner",
     grayscale: true,
   },
 ];
@@ -88,15 +88,15 @@ export default function TeamCulture() {
         <SectionHeading redText="Team" whiteText="Culture" />
 
         <p className="text-sm sm:text-base leading-relaxed text-white/80 mt-8">
-          Studio Six F operates without walls, a remote-first team built on
+          Kommon Canvas operates without walls, a remote-first team built on
           shared ambition and exceptional standards.
         </p>
-        <p className="mt-4 text-sm sm:text-base leading-relaxed text-white/80">
+        {/* <p className="mt-4 text-sm sm:text-base leading-relaxed text-white/80">
           We work globally, think collectively, and design with purpose. Our
           culture thrives on independence and interdependence — where clarity
           guides decisions, curiosity drives discovery, and collaboration
           shapes outcomes.
-        </p>
+        </p> */}
       </div>
 
       {/* Marquee */}

@@ -136,7 +136,7 @@ export default function BrandStory() {
               {/* Curved text */}
               <text fontSize="7.2" fill="#FF0000" letterSpacing="1.5">
                 <textPath href="#badge-circle-path" startOffset="0%">
-                  DESIGN &amp; BRANDING AGENCY • DESIGN &amp; BRANDING AGENCY •
+                  PACKAGING &amp; BRAND DESIGN STUDIO • PACKAGING &amp; BRAND DESIGN STUDIO •
                 </textPath>
               </text>
 
